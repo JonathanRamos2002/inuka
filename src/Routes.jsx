@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Import page components
 import HomePage from './pages/Home';
-import ServicesPage from './pages/Services/services';
-import EventsPage from './pages/Events/events';
-import ContactPage from './pages/Contact/Contact';
+import ServicesPage from './pages/Services';
+import EventsPage from './pages/Events';
+import ContactPage from './pages/Contact';
 
 const AppRoutes = () => {
   return (
