@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --primary-background: #f36a34;
+    --primary-foreground: #030d28;
+    --primary-light: #ff8268;
+    --primary-dark: #e55a2b;
+
+    /* Secondary Colors */
+    --secondary-background: #f9f9fb;
+    --secondary-foreground: #7f7f7f;
+    --secondary-light: #ffffff;
+    --secondary-dark: #030d28;
+
+    /* Accent Colors */
+    --accent-color: #fde1d6;
+    --accent-foreground: #000000;
+    --accent-light: #eeefef;
+    --accent-dark: #e1e1e9;
+
+    /* Border Colors */
+    --border-primary: #00000014;
+    --border-secondary: #ececee;
+    --border-light: #e7e7ee;
+    --border-dark: #000000;
+  }
+}
+
+@layer utilities {
+  /* Background Color Utilities */
+  .bg-primary-orange {
+    background-color: var(--primary-background);
+  }
+
+  .bg-primary-dark {
+    background-color: var(--primary-dark);
+  }
+
+  .bg-secondary-light-gray {
+    background-color: var(--secondary-background);
+  }
+
+  .bg-secondary-white {
+    background-color: var(--secondary-light);
+  }
+
+  .bg-accent-peach {
+    background-color: var(--accent-color);
+  }
+
+  .bg-accent-light-gray {
+    background-color: var(--accent-light);
+  }
+
+  .bg-accent-input {
+    background-color: var(--accent-dark);
+  }
+
+  /* Text Color Utilities */
+  .text-primary-dark {
+    color: var(--primary-foreground);
+  }
+
+  .text-secondary-gray {
+    color: var(--secondary-foreground);
+  }
+
+  .text-accent-black {
+    color: var(--accent-foreground);
+  }
+
+  /* Border Color Utilities */
+  .border-primary-light {
+    border-color: var(--border-primary);
+  }
+
+  .border-secondary-gray {
+    border-color: var(--border-secondary);
+  }
+
+  .border-light-gray {
+    border-color: var(--border-light);
+  }
+
+  .border-dark {
+    border-color: var(--border-dark);
+  }
+
+  /* Custom gradient utilities */
+  .gradient-overlay {
+    background: linear-gradient(0deg, #000000a5 0%, #00000000 100%);
+  }
+
+  .gradient-peach {
+    background: linear-gradient(0deg, #fde1d6 0%, #fde1d600 100%);
+  }
+
+  .gradient-peach-horizontal {
+    background: linear-gradient(90deg, #fde1d6 0%, #fde1d600 100%);
+  }
+
+  .gradient-dark-overlay {
+    background: linear-gradient(180deg, #1a1a1a00 0%, #19191999 100%);
+  }
+}
