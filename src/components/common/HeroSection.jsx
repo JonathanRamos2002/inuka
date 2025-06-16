@@ -3,41 +3,37 @@ import Button from '../ui/Button';
 
 const HeroSection = () => {
   return (
-    <section className="bg-white py-20 px-20">
-      <div className="flex items-center justify-between">
-        <div className="flex-1 max-w-2xl">
-          <h1 className="text-[80px] leading-[84px] font-light text-[#030d28] capitalize mb-8">
-            <span className="text-[#030d28a5] font-light">Empowering African </span>
-            <span className="font-normal">International Students for Success</span>
+    <section className="bg-[#f9f9fb] py-12 md:py-24 px-4 md:px-20">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+        <div className="flex-1 text-center md:text-left">
+          <h1 className="text-4xl md:text-[64px] leading-tight md:leading-[97px] font-light text-[#030d28] capitalize mb-4 md:mb-8">
+            Empowering International Students
           </h1>
-          
-          <p className="text-base leading-6 text-[#7f7f7f] mb-12 max-w-xl">
-            Bridging the gap between education and opportunity, we connect African International Students with mentorship, career guidance, and a supportive community. With insights from successful African professionals, we help students navigate challenges and unlock their full potential in academic and professional life.
+          <p className="text-lg md:text-xl leading-6 text-[#030d287f] mb-8 md:mb-12 max-w-2xl mx-auto md:mx-0">
+            Supporting, empowering, and connecting International Students through mentorship, career development, and educational resources.
           </p>
-          
-          <div className="flex space-x-6">
-            <Button variant="primary" className="bg-[#f36a34] text-white px-10 py-4 rounded-lg font-medium capitalize">
-              Upcoming Events
+          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <Button variant="primary" className="bg-[#f36a34] text-white px-8 py-4 rounded-lg font-medium capitalize">
+              Get Started
             </Button>
-            <button className="text-[#030d28] text-base font-medium capitalize flex items-center space-x-2 hover:text-[#f36a34] transition-colors">
-              <span>Explore Scholarships</span>
-              <img src="/images/img_icon.svg" alt="arrow" className="w-4 h-4" />
-            </button>
+            <Button variant="secondary" className="bg-white text-[#030d28] px-8 py-4 rounded-lg font-medium capitalize">
+              Learn More
+            </Button>
           </div>
         </div>
-        
-        <div className="relative w-[650px] h-[650px]">
-          <div className="w-[601px] h-[601px] bg-white rounded-full overflow-hidden">
+
+        <div className="relative w-full max-w-[400px] md:max-w-[650px] aspect-square">
+          <div className="w-full h-full bg-white rounded-full overflow-hidden">
             <img 
               src="/images/img_unsplashzot6a59k2be.png" 
-              alt="African International Students" 
+              alt="International Students" 
               className="w-full h-full object-cover"
             />
           </div>
           <img 
             src="/images/img_frame_1321315698.png" 
             alt="Decorative element" 
-            className="absolute bottom-0 -right-12 w-[307px] h-[307px] transform translate-y-16"
+            className="absolute bottom-0 -right-6 md:-right-12 w-[200px] md:w-[307px] h-[200px] md:h-[307px] transform translate-y-8 md:translate-y-16"
           />
         </div>
       </div>

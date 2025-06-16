@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../../src/components/common/Header';
 import Footer from '../../src/components/common/Footer';
 import Card from '../../src/components/ui/Card';
+import Button from '../../src/components/ui/Button';
 
 const ServicesPage = () => {
   const services = [
@@ -67,24 +68,24 @@ const ServicesPage = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-[#f9f9fb] py-24 px-20">
+      <section className="bg-[#f9f9fb] py-12 md:py-24 px-4 md:px-20">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-[64px] leading-[97px] font-light text-[#030d28] capitalize mb-8">
+          <h1 className="text-4xl md:text-[64px] leading-tight md:leading-[97px] font-light text-[#030d28] capitalize mb-4 md:mb-8">
             Our Services
           </h1>
-          <p className="text-xl leading-6 text-[#030d287f] mb-12 max-w-4xl">
+          <p className="text-lg md:text-xl leading-6 text-[#030d287f] mb-8 md:mb-12 max-w-4xl">
             Empowering International Students by providing a suite of services designed to bridge the gap between academic challenges and professional success. Our services focus on mentorship, career development, support, networking, and financial assistance.
           </p>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-24 px-20">
-        <div className="grid grid-cols-2 gap-12">
+      <section className="py-12 md:py-24 px-4 md:px-20">
+        <div className="max-w-6xl mx-auto space-y-8 md:space-y-12">
           {services.map((service, index) => (
-            <Card key={index} variant="default" className="p-8">
-              <div className="flex flex-col h-full">
-                <div className="relative h-[300px] mb-8 rounded-[30px] overflow-hidden">
+            <Card key={index} variant="default" className="p-6 md:p-8">
+              <div className="flex flex-col md:flex-row gap-6 md:gap-8">
+                <div className="relative w-full md:w-1/3 h-[200px] md:h-[300px] rounded-[20px] md:rounded-[30px] overflow-hidden">
                   {service.image ? (
                     <img 
                       src={service.image} 
@@ -103,27 +104,31 @@ const ServicesPage = () => {
                   )}
                 </div>
                 
-                <h3 className="text-3xl leading-[43px] font-medium text-[#030d28] capitalize mb-4">
-                  {service.title}
-                </h3>
-                
-                <p className="text-lg leading-7 text-[#030d287f] mb-6">
-                  {service.description}
-                </p>
-                
-                <ul className="space-y-3 mb-8">
-                  {service.details.map((detail, idx) => (
-                    <li key={idx} className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-[#f36a34] rounded-full"></div>
-                      <span className="text-base leading-6 text-[#030d28]">{detail}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                <button className="mt-auto text-[#f36a34] text-base font-medium capitalize flex items-center space-x-2 hover:text-[#030d28] transition-colors">
-                  <span>Learn More</span>
-                  <img src="/images/img_icon.svg" alt="arrow" className="w-4 h-4" />
-                </button>
+                <div className="flex-1">
+                  <h3 className="text-2xl md:text-3xl leading-tight md:leading-[43px] font-medium text-[#030d28] capitalize mb-4">
+                    {service.title}
+                  </h3>
+                  
+                  <p className="text-base md:text-lg leading-6 md:leading-7 text-[#030d287f] mb-6">
+                    {service.description}
+                  </p>
+                  
+                  <ul className="space-y-3 mb-6 md:mb-8">
+                    {service.details.map((detail, idx) => (
+                      <li key={idx} className="flex items-center space-x-3">
+                        <div className="w-2 h-2 bg-[#f36a34] rounded-full"></div>
+                        <span className="text-sm md:text-base leading-6 text-[#030d28]">{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <Button 
+                    variant="primary" 
+                    className="bg-[#f36a34] text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-medium capitalize text-sm md:text-base"
+                  >
+                    Learn More
+                  </Button>
+                </div>
               </div>
             </Card>
           ))}

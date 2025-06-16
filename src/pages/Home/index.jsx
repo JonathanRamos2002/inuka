@@ -21,7 +21,7 @@ const HomePage = () => {
   const faqItems = [
     {
       question: "What services does INUKA provide?",
-      answer: "INUKA Foundation is a non-profit organization dedicated to supporting African International Students (AIS) by providing mentorship, career development, scholarships, and mental health resources."
+      answer: "INUKA Foundation is a non-profit organization dedicated to supporting International Students (AIS) by providing mentorship, career development, scholarships, and mental health resources."
     },
     {
       question: "How can Inuka help me grow?",
