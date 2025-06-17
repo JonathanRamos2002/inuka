@@ -136,8 +136,8 @@ const ContactPage = () => {
               <h2 className="text-2xl md:text-3xl leading-tight md:leading-[43px] font-medium text-[#030d28] capitalize mb-6 md:mb-8">
                 Send us a Message
               </h2>
-              
-              <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
+
+              <form action="https://formsubmit.co/admin@heapglobal.com" method="POST" className="space-y-4 md:space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm md:text-base font-medium text-[#030d28] mb-2">
                     Your Name
