@@ -64,9 +64,11 @@ const Header = () => {
           </div>
         </nav>
         
-        <Button variant="secondary" className="hidden md:flex bg-[#f9f9fb] text-[#030d28] px-10 py-4 rounded-lg font-medium capitalize">
-          Donate Now
-        </Button>
+        <Link to="/donate">
+          <Button variant="secondary" className="hidden md:flex bg-[#f9f9fb] text-[#030d28] px-10 py-4 rounded-lg font-medium capitalize">
+            Donate Now
+          </Button>
+        </Link>
       </div>
 
       {/* Mobile Navigation Menu */}
@@ -101,9 +103,14 @@ const Header = () => {
             >
               Contact Us
             </Link>
-            <Button variant="secondary" className="bg-[#f9f9fb] text-[#030d28] px-10 py-4 rounded-lg font-medium capitalize w-full">
-              Donate Now
-            </Button>
+            <Link 
+              to="/donate" 
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <Button variant="secondary" className="bg-[#f9f9fb] text-[#030d28] px-10 py-4 rounded-lg font-medium capitalize w-full">
+                Donate Now
+              </Button>
+            </Link>
           </nav>
         </div>
       )}

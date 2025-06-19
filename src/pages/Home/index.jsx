@@ -6,6 +6,7 @@ import Button from '../../components/ui/Button';
 import InputField from '../../components/ui/InputField';
 import Card from '../../components/ui/Card';
 import Accordion from '../../components/ui/Accordion';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   const [email, setEmail] = useState('');
@@ -429,10 +430,12 @@ const HomePage = () => {
           <p className="text-sm md:text-base leading-6 font-medium text-[#7f7f7f] capitalize mb-6 md:mb-12 max-w-2xl mx-auto">
             Your donation empowers International Students with mentorship, career support, scholarships, and mental health resources, shaping the next generation of leaders and innovators.
           </p>
-          <Button variant="primary" className="bg-[#f36a34] text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-medium capitalize flex items-center space-x-2 mx-auto">
-            <span>Donate Now</span>
-            <img src="/images/img_icon_white_a700.svg" alt="arrow" className="w-4 h-4" />
-          </Button>
+          <Link to="/donate">
+            <Button variant="primary" className="bg-[#f36a34] text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-medium capitalize flex items-center space-x-2 mx-auto">
+              <span>Donate Now</span>
+              <img src="/images/img_icon_white_a700.svg" alt="arrow" className="w-4 h-4" />
+            </Button>
+          </Link>
         </div>
       </section>
 
